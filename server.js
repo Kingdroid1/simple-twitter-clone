@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 import session from 'express-session';
 import dotenv from 'dotenv';
-//import { api } from './components/index';
+import { api } from './src/index';
 
 
 const app = express();
@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 });
 
 // api routes
-//app.use('/v1', api);
+app.use('/api/v1', api);
 
 const PORT = process.env.PORT
 
