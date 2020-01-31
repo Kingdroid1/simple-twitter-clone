@@ -23,19 +23,19 @@ let opts = {}
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = process.env.secret;
 
-	passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
-		return User.findOne({id: jwt_payload.sub})
-			.then(user => {
-				console.log('current user', user)
-				if (user) {
-					return done(null, user)
-				} else {
-					return done(null, false)
-				}
-			})
-			.catch(err => {
-				return done(err, false)
-			})
+	passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
+		try {
+			const user = await User.findOne({ id: jwt_payload.sub });
+			if (user) {
+				return done(null, user);
+			}
+			else {
+				return done(null, false);
+			}
+		}
+		catch (err) {
+			return done(err, false);
+		}
 	}));
 
 export { passport as PassAuth };

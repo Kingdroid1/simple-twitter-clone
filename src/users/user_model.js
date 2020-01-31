@@ -11,18 +11,20 @@ const userSchema = new Schema({
 	email: {
 		type: String,
 		required: true,
-		unique: true
+		unique: true,
+		lowercase: true
 	},
 	
 	password: {
 		type: String
     },
     
-	followers: [],
-    following: []
+	followers: [{type: mongoose.Schema.ObjectId, ref: 'User'}],
+    following: [{type: mongoose.Schema.ObjectId, ref: 'User'}]
     
 }, { timestamps: true,
-     collection: 'users' }
-)
+	 collection: 'users',
+	 usePushEach: true }
+);
 
 export const User = mongoose.model('User', userSchema);

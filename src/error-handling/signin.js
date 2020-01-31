@@ -1,7 +1,6 @@
 import isEmpty from 'validator/lib/isEmpty';
 import isEmail from 'validator/lib/isEmail';
 import isLength from 'validator/lib/isLength';
-import equals  from 'validator/lib/equals';
 
 export const SigninValidation = (data) => {
 	let errors = {}
