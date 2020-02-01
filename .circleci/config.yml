@@ -37,5 +37,3 @@ workflows:
     build:
         jobs:
           - build
-        branches:
-            only: master
