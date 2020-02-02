@@ -5,7 +5,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --require @babel/register --watch tests/*.js --timeout 20000 --exit"
+    "test": "mocha --require @babel/register --watch tests/*.js"
   },
   "repository": {
     "type": "git",
