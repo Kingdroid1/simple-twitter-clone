@@ -1,3 +1,5 @@
+import '@babel/polyfill';
+
 import express from 'express';
 import bodyparser from 'body-parser';
 import cookieparser from 'cookie-parser';
@@ -48,3 +50,5 @@ const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`server listens here on ${PORT}`);
 })
+
+export default app;

@@ -5,7 +5,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "test": "mocha --require @babel/register --watch tests/*.js --timeout 20000 --exit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Kingdroid1/simple-twitter-clone#readme",
   "dependencies": {
+    "@babel/polyfill": "*",
     "@types/cookie-parser": "^1.4.2",
     "@types/passport": "^1.0.2",
     "bcryptjs": "^2.4.3",
@@ -36,5 +37,14 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/register": "*",
+    "chai": "*",
+    "chai-http": "*",
+    "mocha": "*"
   }
 }
