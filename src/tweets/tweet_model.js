@@ -6,8 +6,8 @@ const tweetSchema = new Schema({
 	user: {
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
-    },
-    
+	},
+
 	post: {
 		type: String,
 		required: true,
@@ -20,10 +20,12 @@ const tweetSchema = new Schema({
 		user: { type: mongoose.Schema.ObjectId, ref: 'User' },
 		name: { type: String, default: '' }
 	}]
-	
-}, { timestamps: true,
+
+}, {
+	timestamps: true,
 	collection: 'tweets',
-	usePushEach: true }
+	usePushEach: true
+}
 );
 
 export const Tweet = mongoose.model('Tweet', tweetSchema)

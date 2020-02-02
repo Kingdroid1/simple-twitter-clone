@@ -45,7 +45,7 @@ export const GetAllTweets = async (req, res) => {
     }
 }
 
-export const FollowTweets = (req, res) => {
+export const Following = (req, res) => {
     Tweet.find({
         'user.id': { $in: req.user.following }})
         .sort({ createdAt: -1 })
