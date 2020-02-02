@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "9847e4da-222e-4389-b2d2-49200628fdd1",
+		"name": "Twitter Clone V1",
+		"description": "# Description\n\nThis collection contains documentation of API endpoints for a simple Twitter clone.\n\n# Authentication\n\nThe API uses JWT Bearer AuthToken to authenticate users.\n\n# Response and Error Codes\n\nstatus code 200 OK,\nstatus code 201 Created,\nerror code 404 Not found,\nerror code 400 unauthorized",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Eedee Nanku",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eedeen@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "1234567",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7003/api/v1/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "eedeen@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7003/api/v1/user/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OwnTimeline",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMzMwYTY0YWVmNTRjMTU3Y2IzYTM5ZSIsImlhdCI6MTU4MDQ4NDQ3NywiZXhwIjoxNTgwNTcwODc3fQ.th9hkLr9WXK1rkdwQNiUyMCZgcHc6PPhqJMru9cYlkA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7003/api/v1/index/timeline",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"index",
+								"timeline"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMzMwYTY0YWVmNTRjMTU3Y2IzYTM5ZSIsImlhdCI6MTU4MDQ4NDQ3NywiZXhwIjoxNTgwNTcwODc3fQ.th9hkLr9WXK1rkdwQNiUyMCZgcHc6PPhqJMru9cYlkA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7003/api/v1/user/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7003/api/v1/user/search/NAME",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"search",
+								"NAME"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a1a87fb7-0a46-4a6c-93ed-8e73e30c0618",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "656ef986-5cb9-496d-b9b8-653b1aa9e2fa",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tweets",
+			"item": [
+				{
+					"name": "PostTweets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMzMwYTY0YWVmNTRjMTU3Y2IzYTM5ZSIsImlhdCI6MTU4MDQ4NDQ3NywiZXhwIjoxNTgwNTcwODc3fQ.th9hkLr9WXK1rkdwQNiUyMCZgcHc6PPhqJMru9cYlkA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "post",
+									"value": "what a day to be alive! God be thanked.",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7003/api/v1/tweet/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"tweet",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchTweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7003/api/v1/tweet/tweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"tweet",
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SingleTweet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7003/api/v1/tweet/singletweet/TWEET_ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7003",
+							"path": [
+								"api",
+								"v1",
+								"tweet",
+								"singletweet",
+								"TWEET_ID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Following",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for managing tweets",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a868c077-0a55-4a7a-aaff-4c6a6b3fdfa3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a054a290-709c-432a-b3e3-b32763211715",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
