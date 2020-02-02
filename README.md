@@ -34,7 +34,7 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
 * [Babel](https://babeljs.io/) used for transpiling codes
 * [Mocha](https://mochajs.org/) used for setting up tests
 * [Chai](https://www.chaijs.com/) an assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
-* [CircleCI](https://circleci.com/) helps securely automate development process with continuous integration and deployment quickly, safely, and at scale.
+* [CircleCI](https://circleci.com/) helps securely automate development process with continuous integration and deployment (CICD) pipeline tool-chain quickly, safely, and at scale.
 
 ## Installations
 
