@@ -45,11 +45,11 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
 
 ### Clone
 
-* Clone this project to your local machine `https://github.com/allebd/swapi.git`
+* Clone this project to your local machine `https://github.com/Kingdroid1/simple-twitter-clone.git`
   > Run the command below
 
 ```shell
-   git clone https://github.com/allebd/swapi.git
+   git clone https://github.com/Kingdroid1/simple-twitter-clone.git
 ```
 
 ### Setup
@@ -71,16 +71,6 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
 ```
 
 * Use `http://localhost:7003` as base url for endpoints
-
-### Endpoints
-
-| METHOD | DESCRIPTION                             | ENDPOINTS
-| ------ | --------------------------------------- | -------------------------
-| GET    | Listing the names of Star Wars movies   | `/api/v1/movies`
-| GET    | Getting the character list for a movie  | `/api/v1/movie/:episodeId/characters`
-| POST   | Adding anonymous comments for a movie   | `/api/v1/movie/:episodeId/comments`
-| GET    | Listing anonymous comments for a movie  | `/api/v1/movie/:episodeId/comments`
-| GET    | Get API Documentation                   | `/docs`
 
 ### Running Unit Test
 
