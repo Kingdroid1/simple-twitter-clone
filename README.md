@@ -29,13 +29,12 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
 ## Technologies Used
 
 * [Node-js](https://nodejs.org/en/) Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
-* [MongDB](https://www.postgresql.org/) used for setting up relational database
-* [Sequelize](https://sequelize.org//) a Node.js ORM for Postgres
-* [Babel](https://babeljs.io/) used for transpiling codes from ES6 to ES5
+* [MongDB](https://www.mongodb.com/) used for setting up NOSQL database
+* [Mongoose](https://mongoosejs.com/docs/) a Node.js ORM for MongoDB
+* [Babel](https://babeljs.io/) used for transpiling codes
 * [Mocha](https://mochajs.org/) used for setting up tests
 * [Chai](https://www.chaijs.com/) an assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
-* [Docker](https://www.docker.com/) helps securely build, share and run modern applications anywhere
-* [Redis](https://redis.io/) helps to cache data for a faster response rate
+* [CircleCI](https://circleci.com/) helps securely automate development process with continuous integration and deployment quickly, safely, and at scale.
 
 ## Installations
 
@@ -62,21 +61,7 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
    npm install
 ```
 
-* Create a .env file similar to the .env.sample file
-
-* Create your database
-  > Run the command below
-
-```shell
-  npx sequelize db:create
-```
-
-* Add tables to database
-  > Run the command below
-
-```shell
-  npm run db:ready
-```
+* Create a .env file
 
 * Start your node server
   > Run the command below
@@ -85,7 +70,7 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
   npm start
 ```
 
-* Use `http://localhost:3000` as base url for endpoints
+* Use `http://localhost:7003` as base url for endpoints
 
 ### Endpoints
 
@@ -108,8 +93,8 @@ API Documentation was generated with [Postman](https://web.postman.co/collection
 
 ## Acknowledgements
 
-* [Paystack](https://paystack.com/)
+* [SoftcomNG](https://softcom.ng/)
 
 ## Author
 
-[Bella Oyedele](https://github.com/allebd)
+[Nicholas King](https://github.com/Kingdroid1)
