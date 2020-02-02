@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build_test:
       working_directory: ~/twitter-clone
       docker:
           - image: circleci/node:12.14.1-browsers
@@ -24,16 +24,14 @@ jobs:
           - run: npm test
           - store_artifacts:
               path: test-results.xml
-              prefix: tests
           - store_artifacts:
               path: coverage
-              prefix: coverage
           - store_test_results:
               path: test-results.xml
                            
         
 workflows:
     version: 2
-    build:
+    build_and_test:
         jobs:
-          - build
+          - build_test
