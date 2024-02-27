@@ -31,15 +31,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // DB Connect
-// mongoose.Promise = global.Promise;
-// mongoose
-//   .connect(process.env.MONGODB || "", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log("database connected"))
-//   .catch((err) => console.log("could not connect database", err))
-//   .finally(() => null);
+mongoose.Promise = global.Promise;
+mongoose
+  .connect(process.env.MONGODB || "", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("database connected"))
+  .catch((err) => console.log("could not connect database", err))
+  .finally(() => null);
 
 app.get("/", (req, res) => {
   res.send("<p>Welcome to my Simple Twitter clone</p>");

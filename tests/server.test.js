@@ -1,5 +1,22 @@
 import request from 'supertest';
+import {describe, expect, test, it} from '@jest/globals';
 import app from '../server';
+import mongoose from 'mongoose';
+
+let server;
+
+beforeAll(done => {
+  server = app.listen(done);
+});
+// Close server after tests
+afterAll(done => {
+  server.close(done);
+});
+
+// Close DB (Mongoose) connection
+afterAll(async () => {
+    await mongoose.disconnect();
+  });
 
 describe('Server Tests', () => {
   it('should return a string on default url path', async () => {
