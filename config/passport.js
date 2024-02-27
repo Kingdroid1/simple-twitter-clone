@@ -1,7 +1,7 @@
 import passportjwt from 'passport-jwt';
 import passport from 'passport';
 import dotenv from 'dotenv';
-import { User } from '../users/user_model';
+import { User } from '../users/user_model.js';
 const JwtStrategy = passportjwt.Strategy;
 const ExtractJwt = passportjwt.ExtractJwt;
 dotenv.config();
@@ -21,7 +21,7 @@ passport.serializeUser((user, done) => {
 
 let opts = {}
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-opts.secretOrKey = process.env.secret;
+opts.secretOrKey = process.env.secret || '';
 
 	passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
 		try {

@@ -1,4 +1,4 @@
-import { Tweet } from './tweet_model';
+import { Tweet } from './tweet_model.js';
 
 export const PostTweet = async (req, res) => {
     try {

@@ -2,12 +2,12 @@ import express from 'express';
 const router = express.Router();
 
 /* Models */
-import './users/user_model';
-import './tweets/tweet_model';
+import './users/user_model.js';
+import './tweets/tweet_model.js';
 
 /* Routes */
-import { userRouter } from './users/user_route';
-import { tweetRouter } from './tweets/tweet_route';
+import { userRouter } from './users/user_route.js';
+import { tweetRouter } from './tweets/tweet_route.js';
 
 router.use('/user', userRouter);
 router.use('/tweet', tweetRouter);

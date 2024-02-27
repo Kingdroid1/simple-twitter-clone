@@ -1,7 +1,7 @@
-import isEmpty from 'validator/lib/isEmpty';
-import isEmail from 'validator/lib/isEmail';
-import isLength from 'validator/lib/isLength';
-import equals  from 'validator/lib/equals';
+import isEmpty from 'validator/lib/isEmpty.js';
+import isEmail from 'validator/lib/isEmail.js';
+import isLength from 'validator/lib/isLength.js';
+import equals  from 'validator/lib/equals.js';
 
 export const SignupValidation = (data) => {
 	let errors = {}

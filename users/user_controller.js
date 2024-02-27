@@ -1,9 +1,9 @@
-import { User } from './user_model';
-import { Tweet } from '../tweets/tweet_model';
+import { User } from './user_model.js';
+import { Tweet } from '../tweets/tweet_model.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { SignupValidation } from '../error-handling/signup';
-import { SigninValidation } from '../error-handling/signin';
+import { SignupValidation } from '../error-handling/signup.js';
+import { SigninValidation } from '../error-handling/signin.js';
 
 export const Signup = (req, res) => {
     const { isValid, errors } = SignupValidation(req.body);

@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router();
-import { PassAuth } from '../config/passport';
+import { PassAuth } from '../config/passport.js';
 
-import { PostTweet, GetAllTweets, GetSingleTweet, Following } from './tweet_controller';
+import { PostTweet, GetAllTweets, GetSingleTweet, Following } from './tweet_controller.js';
 
 router.post('/post', PassAuth.authenticate('jwt', {session: false}), PostTweet);
 

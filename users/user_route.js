@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router();
-import { PassAuth } from '../config/passport';
+import { PassAuth } from '../config/passport.js';
 
-import { Signup, Signin, FollowUsers, ViewOwnTimeline, SearchUsersByName }  from './user_controller';
+import { Signup, Signin, FollowUsers, ViewOwnTimeline, SearchUsersByName }  from './user_controller.js';
 
 router.post('/signup', Signup);
 

@@ -1,11 +1,17 @@
 {
   "name": "simple-twitter-clone",
   "version": "1.0.0",
-  "description": "simple twitter clone in nodejs\u001b[D\u001b[D\u001b[D\u001b[D\u001b[N\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D.js",
+  "description": "simple twitter clone in node",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --require @babel/register --watch tests/*.js"
+    "start": "node server",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -32,19 +38,19 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^5.8.10",
-    "passport": "^0.4.1",
+    "passport": "^0.7.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^12.2.0"
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@babel/cli": "*",
     "@babel/core": "*",
+    "@babel/plugin-transform-unicode-sets-regex": "*",
     "@babel/preset-env": "*",
-    "@babel/register": "*",
-    "chai": "*",
-    "chai-http": "*",
-    "mocha": "*"
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }

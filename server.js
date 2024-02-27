@@ -8,7 +8,7 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 import session from 'express-session';
 import dotenv from 'dotenv';
-import { api } from './src/index';
+import { api } from './index.js';
 
 
 const app = express();
@@ -20,7 +20,7 @@ dotenv.config();
 
 // for sessions mgt
 app.use(session({
-  secret: process.env.SECRET,
+  secret: process.env.secret,
   resave: true,
   saveUninitialized: true,
   cookie: { secure: true, httpOnly: true, maxAge: 86400 }
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 // api routes
 app.use('/api/v1', api);
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || '';
 
 app.listen(PORT, () => {
   console.log(`server listens here on ${PORT}`);
